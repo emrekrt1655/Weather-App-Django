@@ -1,0 +1,55 @@
+body {
+    background: #fafafa;
+    color: #333333;
+    margin-top: 5rem;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #444444;
+    text-align: center;
+  }
+
+  .city {
+    height: auto;
+    padding: 20px;
+    width: 90%;
+    border: 5px solid green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto 0px;
+    color: green;
+    flex-direction: column;
+    font-size: 20px;
+    border-radius: 20px;
+  }
+
+  button{
+    color: green;
+    padding: 5px;
+    margin-top: 3px;
+    background-color: orange;
+    outline: none;
+    border: azure;
+    border-radius: 10px;
+  }
+  form {
+    text-align: center;
+    margin: auto
+  }
+  input {
+    padding: 5px;
+    width: 150px;
+  }
+
+  p {
+      text-align: center;
+      font-weight: bold;
+      font-size: large;
+      color: red;
+  }

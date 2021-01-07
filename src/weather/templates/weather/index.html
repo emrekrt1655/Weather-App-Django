@@ -1,8 +1,10 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="{% static 'weather/main.css' %}">
     <title>Document</title>
   </head>
   <body>
@@ -10,26 +12,33 @@
 
     {% if messages %}
     {% for message in messages %}
-    {{message}}
+   <p> {{message}} </p> 
     {% endfor %}
     {% endif %}
 
     <br />
+    
     <form action="" method="POST">
       {% csrf_token %} {{ form }}
       <button type="submit">Add</button>
     </form>
     <br />
-    {% for city in city_data %} {{ city.city }} <br />
+   
+   {% for city in city_data %} 
+   <div class="city">
+   {{ city.city }} <br />
     <img
       src="http://openweathermap.org/img/w/{{ city.icon }}.png"
       alt="Image"
     />
-    <br />
-    {{ city.temp }} <br />
-    {{ city.description }} <br />
+    
+    {{ city.temp }} 
+    {{ city.description }} 
    
-    <button>Delete</button>
+    <button>Delete</button> <br>
+    </div>
+    
     {% endfor %}
-  </body>
+ 
+ 
 </html>
