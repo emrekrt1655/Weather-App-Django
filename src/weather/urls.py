@@ -3,5 +3,5 @@ from .views import index, city_delete
 
 urlpatterns = [
     path('', index, name="home"),
-    path('<int:id>/delete/', city_delete, name="delete")
+    path('<name>/delete/', city_delete, name="delete")
 ]

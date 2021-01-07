@@ -34,8 +34,8 @@
     
     {{ city.temp }} 
     {{ city.description }} 
-   
-    <button>Delete</button> <br>
+
+    <a href="{% url 'delete' city.city %}">Delete</a>
     </div>
     
     {% endfor %}

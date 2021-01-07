@@ -43,11 +43,13 @@ def index(request):
         "city_data": city_data,
         "form": form
     }
-
+    
     return render(request, "weather/index.html", context)
 
-def city_delete(request,id):
-    city = get_object_or_404(City, id=id)
+
+def city_delete(request,name):
+    city = get_object_or_404(City, name=name)
+    name = city.name
     if request.method == "POST":
         city.delete()
         return redirect("home")
